@@ -27,7 +27,7 @@ No books found matching '<%= @search_term %>'
                     book["volumeInfo"]["previewLink"] if book["volumeInfo"]["imageLinks"]%></td>
         <td> <%= book["volumeInfo"]["title"] if book["volumeInfo"]["title"]%></td>
         <td> <%= book["volumeInfo"]["authors"].join(',') if book["volumeInfo"]["authors"]%></td>
-        <td> <%= book["volumeInfo"]["description"]%></td>
+        <td> <%= sanitize(book["volumeInfo"]["description"])%></td>
     </tr>
     <% end %>
 </table>
