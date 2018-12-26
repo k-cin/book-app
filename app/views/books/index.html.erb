@@ -8,6 +8,12 @@
   <% end %>
 </div>
 
+<% if @books.empty? %>
+
+No books found matching '<%= @search_term %>'
+
+<% else %>
+
 <table border="1">
     <tr>
         <th></th>
@@ -17,10 +23,13 @@
     </tr>
     <% @books.each do |book| %>
     <tr class=<%= cycle('even', 'odd')%>>
-        <td> <%= link_to image_tag(book["volumeInfo"]["imageLinks"]["thumbnail"]) %></td>
-        <td> <%= book["volumeInfo"]["title"] %></td>
+        <td> <%= link_to image_tag(book["volumeInfo"]["imageLinks"]["thumbnail"]),
+                    book["volumeInfo"]["previewLink"] if book["volumeInfo"]["imageLinks"]%></td>
+        <td> <%= book["volumeInfo"]["title"] if book["volumeInfo"]["title"]%></td>
         <td> <%= book["volumeInfo"]["authors"].join(',') if book["volumeInfo"]["authors"]%></td>
-        <td> <%= book["volumeInfo"]["description"] if book["volumeInfo"]["description"] %></td>
+        <td> <%= book["volumeInfo"]["description"]%></td>
     </tr>
     <% end %>
 </table>
+
+<% end %>
