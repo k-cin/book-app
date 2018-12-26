@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>A static web page</title>
+    </head>
+    <body>
+        <h1>Never any dynamic content!</h1>
+        <dl>
+            <dt>Apples</dt>
+            <dd>mmmmmmm.....</dd>
+            <dt>Oranges</dt>
+            <dd>ewwww.....</dd>
+        </dl>
+
+        <pre id="spoonacular-ingredients" style="display:none">
+            6 red bell peppers 
+            1 tbsp vinegar
+            1 teaspoon sugar
+            </pre>
+            <div id="spoonacular-ingredient-visualizer"></div>
+            <script type="text/javascript">
+             var spoonacularServings = 1;
+             var spoonacularMeasure = 'us';
+             var spoonacularView = 'grid';
+            </script>
+            <script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+            <script type="text/javascript" src="https://spoonacular.com/cdn/spoonacular-1.6.min.js"></script>
+    </body>
+</html>
