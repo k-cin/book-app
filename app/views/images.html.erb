@@ -1,0 +1,18 @@
+<% if @magic_images.empty? %>
+
+No cards found matching that criteria
+
+<% else %>
+
+<table border=1>
+    <tr>
+        <th></th>
+    </tr>
+    <% @magic_images.each do |image| %>
+    <tr>
+        <td> <%= image_tag(image) %></td>
+    </tr>
+    <% end %>
+</table>
+
+<% end %>

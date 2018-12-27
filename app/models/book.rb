@@ -20,5 +20,15 @@ class Book
         end
         images
     end
-end
 
+    def self.magic_the_gathering name
+        cleaned_up_name = name.gsub /\s+/, ' '
+        response = get("https://api.magicthegathering.io/v1/cards", query: {name: "#{cleaned_up_name}"})["cards"] || []
+        images = []
+        response.each do |card|
+            #puts "Card: #{card["name"]}"
+            images << card["imageUrl"]
+        end
+        images
+    end
+end

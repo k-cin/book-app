@@ -24,7 +24,7 @@ No books found matching '<%= @search_term %>'
     <% @books.each do |book| %>
     <tr class=<%= cycle('even', 'odd')%>>
         <td> <%= link_to image_tag(book["volumeInfo"]["imageLinks"]["thumbnail"]),
-                    book["volumeInfo"]["previewLink"] if book["volumeInfo"]["imageLinks"]%></td>
+             book["volumeInfo"]["previewLink"] if book["volumeInfo"]["imageLinks"]%></td>
         <td> <%= book["volumeInfo"]["title"] if book["volumeInfo"]["title"]%></td>
         <td> <%= book["volumeInfo"]["authors"].join(',') if book["volumeInfo"]["authors"]%></td>
         <td> <%= sanitize(book["volumeInfo"]["description"])%></td>
