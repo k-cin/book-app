@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class BooksController < ApplicationController
   def index
     @search_term = params[:looking_for] || 'Djinn'
@@ -5,7 +7,7 @@ class BooksController < ApplicationController
     @images = Book.image
     @magic_images = Book.magic_the_gathering(@search_term)
   end
-  # def images 
+  # def images
   #   @magic_images = Book.magic_the_gathering "Djinn"
   # end
 end
