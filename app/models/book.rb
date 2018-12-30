@@ -28,7 +28,6 @@ class Book
     response = get('https://api.magicthegathering.io/v1/cards', query: { name: cleaned_up_name.to_s })['cards'] || []
     images = []
     response.each do |card|
-      # puts "Card: #{card["name"]}"
       images << card['imageUrl']
     end
     images
