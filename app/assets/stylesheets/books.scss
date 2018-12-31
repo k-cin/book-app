@@ -2,13 +2,17 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+table {
+  border-collapse: separate;
+}
+
 .even {
-    background-color: white;
-  }
+  background-color: white;
+}
 
 .odd {
-    background-color: #D6E1C3;
-  }
+  background-color: #d6e1c3;
+}
 
 td {
   padding: 12px;
