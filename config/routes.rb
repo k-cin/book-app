@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'books/images' => 'books#images'
   get 'books/index'
 
-  # root 'books#index'
+  root 'books#index'
   resources :entries, defaults: { format: 'json' }
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
