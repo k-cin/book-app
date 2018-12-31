@@ -15,7 +15,7 @@ class Book
   end
 
   def self.image
-    response = get('', query: { q: "intitle:'Star+Wars'", orderBy: 'relevance', maxResults: '5', printType: 'books' })['items'] || []
+    response = get('', query: { q: "intitle:'Star+Wars'", maxResults: '4', printType: 'books' })['items'] || []
     images = []
     response.each do |x|
       images << x['volumeInfo']['imageLinks']['thumbnail']

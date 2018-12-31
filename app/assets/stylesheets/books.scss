@@ -3,12 +3,16 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .even {
-    background-color: bisque;
+    background-color: white;
   }
 
 .odd {
     background-color: #D6E1C3;
   }
+
+td {
+  padding: 12px;
+}
 
 .navBox {
   display: inline-block;
