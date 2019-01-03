@@ -2,7 +2,7 @@
 
 class BooksController < ApplicationController
   def index
-    # Remember - params[:looking_for] doesn't exist so set to 'Djinn'
+    # If params[:looking_for] exists use that, otherwise 'Djinn'
     @search_term = params[:looking_for] || 'Djinn'
     @books = Book.about(@search_term)
     @images = Book.image
@@ -11,4 +11,10 @@ class BooksController < ApplicationController
   # def images
   #   @magic_images = Book.magic_the_gathering "Djinn"
   # end
+  def map_isbn(books)
+    # TODO - 
+  end
+  def sort_books(books) 
+    # TODO - sort the books
+  end
 end
